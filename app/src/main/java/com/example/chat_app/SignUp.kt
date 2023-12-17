@@ -50,6 +50,7 @@ class SignUp : AppCompatActivity() {
                     // code for jumping to home
                     addUserToDatabase(name,email,mAuth.currentUser?.uid!!)
                     val intent = Intent(this@SignUp, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@SignUp, "Some error occured", Toast.LENGTH_SHORT).show();
